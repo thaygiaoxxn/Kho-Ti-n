@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vi du Text Input trong HTML</title>
+<style type="text/css">
+#vien{ width:600 px;
+	height:500px;
+	border:1px solid gray;
+	margin-left:100px;
+	padding-left:100px;
+	margin-right:10px;
+	padding-bottom:50px;
+	margin-bottom:20px;
+	}
+</style>
+</head>
+<body>
+<div onmouseenter="this.style.backgroundColor='yellow'" onmouseleave="this.style.backgroundColor='gray'" id="vien">
+	<p align="center"> ĐIỀN MỘT SỐ THÔNG TIN</P>
+	Họ tên        : <br> <input type="text" id= "text1" name="first_name" />
+	<p style = "color:red;font-size:10px"> Trường này bắt buộc phải nhâp<p>
+	Điểm thái độ   :<br> <input type="text" id= "text2"name="last_name" />
+	<p style = "color:red;font-size:10px"> Trường này bắt buộc phải nhâp<p>
+	Điểm thực hành : <br><input type="text" id= "text3"name="last_name" />
+	<p style = "color:red;font-size:10px"> Trường này bắt buộc phải nhâp<p>
+	Điểm kiểm tra  :  <br> <input type="text"id= "text4" name="last_name" />
+	<p style = "color:red;font-size:10px"> Trường này bắt buộc phải nhâp<p>
+	Điểm quá trình : <br> <input type="text" id= "text5"name="last_name" />
+	<p style = "color:red;font-size:10px"> Trường này bắt buộc phải nhâp<p>
+	<button onclick="diemqt()"> Lưu điểm </button>		
+</div>
+<script>
+		function diemqt() 
+{
+  var a = document.getElementById("text2").value;
+  var b = document.getElementById("text3").value;
+  var c = document.getElementById("text4").value;
+ 
+  var x = (parseFloat(a) + parseFloat(b)*2+parseFloat(c)*2)/5;
+  document.getElementById("text5").value=x;
+}
+</script>
+</body>

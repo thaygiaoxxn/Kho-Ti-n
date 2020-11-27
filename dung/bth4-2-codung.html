@@ -1,0 +1,108 @@
+<html>
+<head>
+    <meta charset="utf-8" />   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<style>
+body{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+#vien,#vien1, #vien2{ width:100px;
+	height:30px;
+	border:1px solid gray;
+	background:white;
+	margin-left:5px;
+	padding-left:5px;
+	margin-right:5px;
+	padding-bottom:5px;
+	padding-top:5px;
+	margin-bottom:5px;
+	}
+</style>
+<script type=”text/JavaScript”>
+//code chống copy nội dung
+function killCopy(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart = new Function ("return false")
+if (window.sidebar){
+document.onmousedown=killCopy
+document.onclick=reEnable
+}
+</script>
+</head>
+<body>   
+    <div id="container" class="container body-content">        
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Getting started</h2>
+                <p>ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites.</p>
+               <p><a id="vien" href="#">Learn more &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Get more libraries</h2>
+                <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries</p>
+               <p> <a id="vien1" href="#">Learn more &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Web Hosting</h2>
+                <p>You can easily find a web hosting company that offers the right mix of features and price for your applications</p>
+                <p><a id ="vien2" href="#">Learn more &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+	<br>
+	<button onclick="thaydoi()"> Sau khi đổi là </button>
+	<script>
+	function thaydoi()
+	{
+	document.getElementById("container").style.background="#00FFFF";
+	document.getElementById("container").style.borderColor="red"
+	function changeHcolor() {
+        var plements = document.getElementsByTagName('h2');
+		 for (var i = 0; i <= plements.length - 1; i++)  {
+            var element = plements[i];
+			console.log(element);
+            element.style.color = "blue";
+            element.style.fontSize = "30px";
+        }
+    }
+	//var x= document.getElementsByTagName('h2')
+	//x[0].style.color ="blue";
+	changeHcolor();	
+	function changePcolor() {
+        var plements = document.getElementsByTagName('p');
+		 for (var i = 0; i <= plements.length - 1; i++)  {
+            var element = plements[i];
+			console.log(element);
+            element.style.color = "red";
+            element.style.fontSize = "15px";
+        }
+    }
+	changePcolor();
+	/*function changeAcolor()
+	 {var el = document.getElemenstByClassName("tam");
+	  for (var i = 0; i <= plements.length - 1; i++)  {
+            var element = plements[i];
+			console.log( element);
+	 		 element.style.color = "red";
+             element.style.fontSize = "15px";}
+	}
+	changeAcolor();*/
+	document.getElementById("vien").style.color="white";
+	document.getElementById("vien").style.background="red";
+	document.getElementById("vien1").style.color="white";
+	document.getElementById("vien1").style.background="red";
+	document.getElementById("vien2").style.color="white";
+	document.getElementById("vien2").style.background="red";
+	}
+	</script>
+</body>
+</html>

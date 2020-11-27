@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>vong lap for</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var a = prompt(" nhập a: "); a=a*1; 
+		var b = prompt(" nhập b: "); b=b*1;
+		var i=0;
+		if(a<b){
+			for(i=a;i<=b;i++){
+				document.write(i+"<br>");
+			}
+		}
+		else{
+			for(i=b;i<=a;i++){
+				document.write(i+"<br>");
+			}
+		}
+	function XuatManHinh(a,b)
+	{ var i=0;
+			document.write("<br>------Xuat Man Hinh-------<br>");
+			if(a<b){
+			for(i=a;i<=b;i++){
+				document.write(i+"<br>");
+			}
+		}
+		else{
+			for(i=b;i<=a;i++){
+				document.write(i+"<br>");
+			}
+		}
+	}
+		XuatManHinh(a,b);
+	function Sum(a,b) {
+		var i=0;
+		var s=0;
+		document.write("<br>------Tong cac so tu a den b-------<br>");
+		if(a<b){
+			for(i=a;i<=b;i++){
+				s=s+i;
+			}
+			document.write("Tong la:"+s+"<br>");
+		}
+		else{
+			for(i=b;i<=a;i++){
+				s=s+i;
+			}
+			document.write("Tong la:"+s+"<br>");
+		}
+	}
+		Sum(a,b);
+	function max5(a,b){
+		document.write("<br>--------Max--------<br>");
+		var i=0;
+		var max=0;
+			if(a<b){
+			for(i=a;i<=b;i++)
+				if( i%5==0 && i%2==0){
+				max=i;
+				}
+				else{
+					document.write("khong co");
+					break;
+				}
+				document.write(max+"<br>");
+			}
+			else{
+				for(i=b;i<=a;i++)
+				if( i%5==0 && i%2==0){
+					max=i;
+				}
+				else{
+					document.write("khong co");
+					break;
+				}
+				document.write(max+"<br>");
+				}
+			}
+			max5(a,b);
+
+		</script>
+</html>

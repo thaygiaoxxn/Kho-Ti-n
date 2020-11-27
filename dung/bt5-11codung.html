@@ -1,0 +1,106 @@
+<HTML>
+ <HEAD> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css
+" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css
+" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<style>
+body{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+</style>
+<script type=”text/JavaScript”>
+function killCopy(e){
+return false
+}
+function reEnable(){
+return true
+}
+document.onselectstart = new Function ("return false")
+if (window.sidebar){
+document.onmousedown=killCopy
+document.onclick=reEnable
+}
+</script>
+ </HEAD>
+ <BODY>
+    <div class="container">
+    <div class="card">
+<H1 style="color:red">PHÉP TOÁN CƠ BẢN</H1>
+
+  
+<p>
+  Nhập số thứ nhất :
+  <br>
+  <input type="text" id="txt1">
+  <p style = "color:red;font-size:10px"> Trường này bắt buộc phải nhâp<p>
+  Nhập số thứ hai : 
+<br>  <input type="text" id="txt2">
+<br> <br>
+
+Kết quả: <br>
+<input type="text" id="txt3">
+ 
+</p>
+<p>
+
+<button class="btn btn-warning" onclick="cong2so()">Cộng +</button>
+<button class="btn btn-info" onclick="tru2so()">Trừ-</button>
+<button class="btn btn-danger" onclick="nhan2so()">Nhân x </button> 
+<button class="btn btn-primary" onclick="chia2so()">Chia :</button>
+</p>
+<br>
+<p id="ketqua"> Kết quả là:</p>
+</<div>
+  
+</div>
+</div>
+<script>
+
+function cong2so() 
+{
+  var y = document.getElementById("txt1").value;
+  var z = document.getElementById("txt2").value;
+  var x = parseFloat(y) + parseFloat(z);
+  document.getElementById("txt3").value=x;
+  document.getElementById("ketqua").innerHTML="Kết quả là:"+x;
+ 
+  }
+  function tru2so() 
+{
+  var y = document.getElementById("txt1").value;
+  var z = document.getElementById("txt2").value;
+  var x = parseFloat(y) - parseFloat(z);
+ document.getElementById("txt3").value=x;
+  document.getElementById("ketqua").innerHTML="Kết quả là:"+x;
+}
+function nhan2so(){
+  var y = document.getElementById("txt1").value;
+  var z = document.getElementById("txt2").value;
+  var x = parseFloat(y) * parseFloat(z);
+ document.getElementById("txt3").value=x;
+  document.getElementById("ketqua").innerHTML="Kết quả là:"+x;
+
+}
+function chia2so(){
+  var y = document.getElementById("txt1").value;
+  var z = document.getElementById("txt2").value;
+  var x = parseFloat(y) / parseFloat(z);
+ document.getElementById("txt3").value=x;
+  document.getElementById("ketqua").innerHTML="Kết quả là:"+x;
+}
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js
+"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js
+"></script>
+ </BODY>
+ </HTML>

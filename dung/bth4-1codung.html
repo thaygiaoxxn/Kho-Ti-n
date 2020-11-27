@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h1 id="title"> Xử lý ảnh</h1>
+	<div>
+		<img id="img" src="https://tse2.mm.bing.net/th?id=OIP.EU9CyAVc0aFxOeOjAWuHOgHaEK&pid=Api&P=0&w=302&h=171" width="300px" height="500px">
+		<p id="p1"> Ảnh trước </p>
+	</div>
+	<button onclick="thaydoi()">Sau khi đổi là </button>
+	<script >
+		function thaydoi()
+	{
+		document.getElementById("title").innerHTML="SAU KHI XỬ LÝ ẢNH" ;
+		document.getElementById("title").style.color="red";
+		document.getElementById("title").style.fontSize="60px";
+		document.getElementById("title").style.fontFamily="Arial";
+		document.getElementById("img").src="https://tse1.mm.bing.net/th?id=OIP.T_q0Pw3xNsMcHWdjavABdgHaFj&pid=Api&P=0&w=207&h=156";
+		document.getElementById("img").style.height="200px";
+		document.getElementById("img").style.width="300px";
+		document.getElementById("p1").innerHTML="Ảnh sau là ";
+		document.getElementById("p1").style.color="red";
+
+	}
+
+
+	</script>
+</body>
+</html>

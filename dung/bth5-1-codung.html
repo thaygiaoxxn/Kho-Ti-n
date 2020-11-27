@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h1 style="color:red"> PHÉP TÍNH CƠ BẢN </h1>
+	<p>
+		Số thứ nhất:
+		<br>
+		<input type="text" id="txt1">
+		<p style="color:red;font-size:10px">Trường này bắt buộc phải nhập</p>
+		Số thứ hai:
+		<br>
+		<input type="text" id="txt2">
+		<br>
+		<br>
+	Kết quả: <br>
+	<input type="text" id="txt3">
+	</p>
+	<p>
+	<button class="btn btn-red" onclick="cong2so()">+</button>
+	<button class="btn btn-danger" onclick="tru2so()">-</button>
+	<br>
+	<button class="btn btn-danger" onclick="nhan2so()">*</button>
+	<button class="btn btn-danger" onclick="chia2so()">/</button>
+	</p>
+	<br>
+	<p id="ketqua"> Kết quả là:</p>
+	<script>
+	function cong2so()
+	{
+		var y=document.getElementById("txt1").value;
+		var z=document.getElementById("txt2").value;
+		var x=parseFloat(y) + parseFloat(z);
+		document.getElementById("txt3").value=x;
+		document.getElementById("ketqua").innerHTML="Kết quả là:"+x;
+	}
+	function tru2so()
+	{
+		var y = document.getElementById("txt1").value;
+		var z = document.getElementById("txt2").value;
+		var x = parseFloat(y) - parseFloat(z);
+		document.getElementById("txt3").value=x;
+		document.getElementById("ketqua").innerHTML="Kết quả là:"+x;
+	}
+	function nhan2so()
+	{
+		var y = document.getElementById("txt1").value;
+		var z = document.getElementById("txt2").value;
+		var x = parseFloat(y) * parseFloat(z);
+		document.getElementById("txt3").value=x;
+		document.getElementById("ketqua").innerHTML="Kết quả là:"+x;
+	}
+	function chia2so()
+	{
+		var y = document.getElementById("txt1").value;
+		var z = document.getElementById("txt2").value;
+		var x = parseFloat(y) / parseFloat(z);
+		document.getElementById("txt3").value=x;
+		document.getElementById("ketqua").innerHTML="Kết quả là:"+x;
+	}
+</script>
+</body>
+</html>
